@@ -1,8 +1,10 @@
 .CocktailItem {
+  position: relative;
   &__card {
     height: 300px;
     width: 280px;
     position: relative;
+    cursor: pointer;
 
     &__image {
       height: 100%;
@@ -21,5 +23,22 @@
       border-radius: 5px;
       box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.055);
     }
+  }
+
+  &__info {
+    color: white;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #131816;
+    top: -20px;
+    height: 110%;
+    width: 120%;
+    padding: 30px;
+    visibility: hidden;
+    cursor: pointer;
+  }
+
+  .show {
+    visibility: visible;
   }
 }
