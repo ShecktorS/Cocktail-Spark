@@ -1,13 +1,12 @@
 import "./index.scss";
 import CocktailItem from "../cocktailItem";
 
-const CocktailList = () => {
+const CocktailList = ({ cocktailList }) => {
   return (
     <div className="CocktailList">
-      <CocktailItem />
-      <CocktailItem />
-      <CocktailItem />
-      <CocktailItem />
+      {cocktailList.map((cocktail) => (
+        <CocktailItem cocktail={cocktail} />
+      ))}
     </div>
   );
 };
