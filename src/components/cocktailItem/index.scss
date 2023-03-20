@@ -1,2 +1,25 @@
 .CocktailItem {
+  &__card {
+    height: 300px;
+    width: 280px;
+    position: relative;
+
+    &__image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__name {
+      position: absolute;
+      font-size: 2rem;
+      bottom: 0;
+      right: -15px;
+      color: rgb(255, 255, 255);
+      background-color: #4a2c20;
+      padding: 3px 10px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.055);
+    }
+  }
 }
