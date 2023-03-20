@@ -1,0 +1,18 @@
+.Hero {
+  height: 80vh;
+  width: 100vw;
+  background-image: url("https://images.pexels.com/photos/1189257/pexels-photo-1189257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  filter: grayscale(0.8) contrast(1.3);
+  object-fit: cover;
+  position: relative;
+
+  h1 {
+    color: white;
+    background-color: #863f1eaf;
+    position: absolute;
+    font-size: 6rem;
+    left: 50%;
+    top: 300px;
+    padding: 20px 70px 20px 20px;
+  }
+}
