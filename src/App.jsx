@@ -8,6 +8,7 @@ import CocktailDetail from "./components/cocktailDetail";
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
+  const [cardIsclicked, setCardClick] = useState(false);
 
   useEffect(() => {
     GET().then(({ drinks }) => setCocktailList(drinks));
@@ -15,9 +16,11 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <CocktailList cocktailList={cocktailList} />
+      {!cardIsclicked && (
+        <CocktailList cocktailList={cocktailList} setCardClick={setCardClick} />
+      )}
 
-      {/* <CocktailDetail /> */}
+      {cardIsclicked && <CocktailDetail setCardClick={setCardClick} />}
       <Footer />
     </div>
   );

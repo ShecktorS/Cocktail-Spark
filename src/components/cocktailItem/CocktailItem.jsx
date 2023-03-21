@@ -1,9 +1,13 @@
 import "./index.scss";
 import "animate.css";
 
-const CocktailItem = ({ cocktail }) => {
+const CocktailItem = ({ cocktail, setCardClick }) => {
+  const onHandleClick = () => {
+    setCardClick(() => true);
+  };
+
   return (
-    <div className="CocktailItem" onClick={() => console.log("pippo")}>
+    <div className="CocktailItem" onClick={onHandleClick}>
       <div className="CocktailItem__card">
         <img
           src={cocktail.strDrinkThumb}

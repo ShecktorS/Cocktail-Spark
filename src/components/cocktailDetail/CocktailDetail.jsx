@@ -1,6 +1,10 @@
 import "./index.scss";
 
-const CocktailDetail = () => {
+const CocktailDetail = ({ setCardClick }) => {
+  const onHandleClick = () => {
+    setCardClick(() => false);
+  };
+
   return (
     <div className="CocktailDetail">
       <div className="CocktailDetail__text">
@@ -13,7 +17,9 @@ const CocktailDetail = () => {
         alt="strDrink"
         className="CocktailDetail__image"
       />
-      <button className="CocktailDetail__button">X</button>
+      <button className="CocktailDetail__button" onClick={onHandleClick}>
+        X
+      </button>
     </div>
   );
 };
