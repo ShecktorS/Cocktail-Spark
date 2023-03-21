@@ -1,9 +1,13 @@
 import "./index.scss";
 import "animate.css";
 
-const CocktailItem = ({ cocktail, setCardClick }) => {
+const CocktailItem = ({ cocktail, setCocktailDetailContext }) => {
   const onHandleClick = () => {
-    setCardClick(() => true);
+    setCocktailDetailContext((prev) => ({
+      ...prev,
+      payload: cocktail,
+      cardIsclicked: true,
+    }));
   };
 
   return (

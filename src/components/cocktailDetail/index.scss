@@ -16,8 +16,8 @@
   &__text {
     height: 100%;
     width: 55%;
+    border-right: 1px solid $primary-color;
     @include flex-container(0, column);
-    border: solid red 1px;
 
     &--title {
       height: 20%;
@@ -25,13 +25,12 @@
     }
 
     &--tags {
-      border: solid blue 1px;
       height: 10%;
     }
 
     &--instructions {
       height: 70%;
-      border: solid blue 1px;
+      padding: 0 50px;
     }
   }
 
