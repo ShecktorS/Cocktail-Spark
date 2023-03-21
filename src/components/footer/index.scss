@@ -1,13 +1,11 @@
 @import "../../styles/variables";
+@import "../../styles/mixin";
 
 .Footer {
   margin-top: 300px;
   height: 500px;
   width: 80vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
+  @include flex-container(30px, row, space-between, flex-start);
   padding: 10px;
   color: $secondary-color;
   flex-wrap: wrap;

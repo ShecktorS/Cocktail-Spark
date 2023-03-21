@@ -4,6 +4,7 @@ import { GET } from "./utils/http";
 import Hero from "./components/hero";
 import CocktailList from "./components/cocktailList";
 import Footer from "./components/footer";
+import CocktailDetail from "./components/cocktailDetail";
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
@@ -14,7 +15,9 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <CocktailList cocktailList={cocktailList} />
+      {/* <CocktailList cocktailList={cocktailList} /> */}
+
+      <CocktailDetail />
       <Footer />
     </div>
   );

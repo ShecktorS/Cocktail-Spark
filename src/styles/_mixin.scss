@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
-@mixin flex-container($standard-gap: 0, $standard-flex-direction: row) {
+@mixin flex-container(
+  $standard-gap: 0,
+  $standard-flex-direction: row,
+  $justify-type: center,
+  $align-type: center
+) {
   display: flex;
   flex-direction: $standard-flex-direction;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justify-type;
+  align-items: $align-type;
   gap: $standard-gap;
 }
 

@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.CocktailDetail {
+  @include flex-container(10px, row, space-around);
+  color: $secondary-color;
+  border: solid white 1px;
+  width: 80vw;
+  height: 400px;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+
+  &__text {
+    width: 55%;
+    @include flex-container(10px, column, flex-start, flex-start);
+  }
+
+  &__image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: $bordotto;
+  }
+
+  &__button {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    transition: transform 0.4s ease;
+    border-radius: 50%;
+    border: none;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.8);
+    }
+  }
+}
