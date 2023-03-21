@@ -3,17 +3,36 @@
 
 .CocktailDetail {
   @include flex-container(10px, row, space-around);
-  color: $secondary-color;
-  border: solid white 1px;
+  color: $primary-color;
+  border: solid $primary-color 1px;
+  background-color: $secondary-color;
   width: 80vw;
   height: 400px;
   box-sizing: border-box;
   padding: 20px;
   position: relative;
+  box-shadow: 4px 4px 6px $active-secondary-color;
 
   &__text {
+    height: 100%;
     width: 55%;
-    @include flex-container(10px, column, flex-start, flex-start);
+    @include flex-container(0, column);
+    border: solid red 1px;
+
+    &--title {
+      height: 20%;
+      color: $active-color;
+    }
+
+    &--tags {
+      border: solid blue 1px;
+      height: 10%;
+    }
+
+    &--instructions {
+      height: 70%;
+      border: solid blue 1px;
+    }
   }
 
   &__image {
@@ -27,6 +46,8 @@
     position: absolute;
     top: 35px;
     right: 35px;
+    background-color: $active-color;
+    color: $secondary-color;
     transition: transform 0.4s ease;
     border-radius: 50%;
     border: none;

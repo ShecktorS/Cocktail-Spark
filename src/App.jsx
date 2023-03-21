@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      {/* <CocktailList cocktailList={cocktailList} /> */}
+      <CocktailList cocktailList={cocktailList} />
 
-      <CocktailDetail />
+      {/* <CocktailDetail /> */}
       <Footer />
     </div>
   );
