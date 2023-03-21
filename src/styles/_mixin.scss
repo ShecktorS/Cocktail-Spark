@@ -1,0 +1,20 @@
+@mixin standard-size {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex-container($standard-gap: 0, $standard-flex-direction: row) {
+  display: flex;
+  flex-direction: $standard-flex-direction;
+  justify-content: center;
+  align-items: center;
+  gap: $standard-gap;
+}
+
+@mixin card-type {
+  height: 300px;
+  width: 280px;
+  position: relative;
+  cursor: pointer;
+}

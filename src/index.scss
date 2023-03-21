@@ -1,9 +1,8 @@
 @import "./styles/variables";
+@import "./styles/mixin";
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @include standard-size;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,4 +11,28 @@ body {
 
 ::selection {
   background-color: $active-secondary-color;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  border-radius: 18px;
+  background-color: $secondary-color;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: $secondary-color;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $active-color;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent,
+    transparent
+  );
 }
