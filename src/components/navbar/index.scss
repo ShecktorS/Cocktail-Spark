@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .Navbar {
   box-sizing: border-box;
   display: flex;
@@ -8,11 +10,16 @@
 
   &__logo {
     height: 100px;
-    background-color: rgba(255, 255, 255, 0.493);
-
+    background-color: $secondary-color;
     position: absolute;
     top: 30px;
     left: 10px;
+
+    @media (max-width: 680px) {
+      height: 38px;
+      top: 0;
+      left: 0;
+    }
   }
 
   &__content {
@@ -25,13 +32,13 @@
     gap: 20px;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    background-color: #ffffff93;
+    background-color: $secondary-color;
 
     li {
       cursor: pointer;
 
       &:hover {
-        color: red;
+        color: $active-color;
       }
     }
   }

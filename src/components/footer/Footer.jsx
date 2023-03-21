@@ -33,7 +33,6 @@ const Footer = () => {
           <p>10:00-03:00</p>
         </div>
       </div>
-      <h3 className="Footer__instagram">Instagram</h3>
     </div>
   );
 };
