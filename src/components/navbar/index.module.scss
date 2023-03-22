@@ -6,7 +6,7 @@
   box-sizing: border-box;
   position: relative;
 
-  &__logo {
+  .logo {
     height: 100px;
     background-color: $secondary-color;
     position: absolute;
@@ -20,7 +20,7 @@
     }
   }
 
-  &__content {
+  .content {
     @include flex-container(20px);
     height: 40px;
     list-style-type: none;

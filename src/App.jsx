@@ -1,4 +1,4 @@
-import "./App.scss";
+import styles from "./App.module.scss";
 import { useEffect, useState } from "react";
 import { GET } from "./utils/http";
 import Hero from "./components/hero";
@@ -16,8 +16,9 @@ function App() {
   useEffect(() => {
     GET().then(({ drinks }) => setCocktailList(drinks));
   }, []);
+
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Hero />
       {!cocktailDetailContext.cardIsclicked && (
         <CocktailList

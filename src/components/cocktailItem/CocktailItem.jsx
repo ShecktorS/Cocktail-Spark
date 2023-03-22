@@ -1,5 +1,4 @@
-import "./index.scss";
-import "animate.css";
+import styles from "./index.module.scss";
 
 const CocktailItem = ({ cocktail, setCocktailDetailContext }) => {
   const onHandleClick = () => {
@@ -11,14 +10,14 @@ const CocktailItem = ({ cocktail, setCocktailDetailContext }) => {
   };
 
   return (
-    <div className="CocktailItem" onClick={onHandleClick}>
-      <div className="CocktailItem__card">
+    <div className={styles.CocktailItem} onClick={onHandleClick}>
+      <div className={styles.card}>
         <img
           src={cocktail.strDrinkThumb}
           alt="drink.strDrink"
-          className="CocktailItem__card__image"
+          className={styles.cardImage}
         />
-        <h2 className="CocktailItem__card__name">{cocktail.strDrink}</h2>
+        <h2 className={styles.cardName}>{cocktail.strDrink}</h2>
       </div>
     </div>
   );

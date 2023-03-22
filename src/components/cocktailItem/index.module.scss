@@ -4,10 +4,10 @@
 .CocktailItem {
   position: relative;
 
-  &__card {
+  .card {
     @include card-type;
 
-    &__image {
+    .cardImage {
       box-sizing: border-box;
       height: 100%;
       width: 100%;
@@ -16,7 +16,7 @@
       border-radius: 50%;
     }
 
-    &__name {
+    .cardNamename {
       position: absolute;
       font-size: 1.5rem;
       bottom: 0;
@@ -27,17 +27,5 @@
       border-radius: 5px;
       box-shadow: 0 4px 4px $active-secondary-color;
     }
-  }
-
-  &__info {
-    color: white;
-    position: absolute;
-    box-sizing: border-box;
-    background-color: #131816;
-    top: -20px;
-    height: 110%;
-    width: 120%;
-    padding: 30px;
-    cursor: pointer;
   }
 }

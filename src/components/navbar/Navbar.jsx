@@ -1,10 +1,10 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Navbar = () => {
   return (
-    <div className="Navbar">
-      <img src="../../../public/favicon.png" alt="" className="Navbar__logo" />
-      <ul className="Navbar__content">
+    <div className={styles.Navbar}>
+      <img src="../../../public/favicon.png" alt="" className={styles.logo} />
+      <ul className={styles.content}>
         <li>Home</li>
         <li>About</li>
         <li>Menu</li>

@@ -1,9 +1,9 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Footer = () => {
   return (
-    <div className="Footer">
-      <div className="Footer__bridge">
+    <div className={styles.Footer}>
+      <div className={styles.bridge}>
         <h2>Bridge</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
@@ -15,14 +15,14 @@ const Footer = () => {
           <p> 📞 +39 3333333565</p>
         </div>
       </div>
-      <div className="Footer__pages">
+      <div className={styles.pages}>
         <h3>Pagine</h3>
         <p>Home</p>
         <p>Prenotazioni</p>
         <p>Menu</p>
         <p>Contatti</p>
       </div>
-      <div className="Footer__openingHours">
+      <div className={styles.openingHours}>
         <h3>Orari di Apertura</h3>
         <div>
           <p>Lunedì-Venerdì:</p>

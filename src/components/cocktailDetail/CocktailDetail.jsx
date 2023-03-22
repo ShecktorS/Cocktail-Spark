@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const CocktailDetail = ({
   setCocktailDetailContext,
@@ -11,20 +11,20 @@ const CocktailDetail = ({
   const { payload } = cocktailDetailContext;
 
   return (
-    <div className="CocktailDetail">
-      <div className="CocktailDetail__text">
-        <h1 className="CocktailDetail__text--title">{payload.strDrink}</h1>
-        <h2 className="CocktailDetail__text--tags">{payload.strTags}</h2>
-        <p className="CocktailDetail__text--instructions">
+    <div className={styles.CocktailDetail}>
+      <div className={styles.text}>
+        <h1 className={styles.title}>{payload.strDrink}</h1>
+        <h2 className={styles.tags}>{payload.strTags}</h2>
+        <p className={styles.textInstructions}>
           {payload.strInstructions.slice(0, 700)}
         </p>
       </div>
       <img
         src="https://www.thecocktaildb.com/images/media/drink/b4cadp1619695347.jpg"
-        alt="strDrink"
-        className="CocktailDetail__image"
+        alt={payload.strDrink}
+        className={styles.image}
       />
-      <button className="CocktailDetail__button" onClick={onHandleClick}>
+      <button className={styles.button} onClick={onHandleClick}>
         X
       </button>
     </div>
