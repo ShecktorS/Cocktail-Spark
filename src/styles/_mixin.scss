@@ -23,3 +23,27 @@
   position: relative;
   cursor: pointer;
 }
+
+@mixin navbarContent-structure {
+  @include flex-container(20px);
+  height: 40px;
+  list-style-type: none;
+  padding: 20px;
+  font-weight: bold;
+  color: $primary-color;
+  background-color: $secondary-color;
+
+  li {
+    cursor: pointer;
+
+    &:hover {
+      color: $active-color;
+    }
+  }
+}
+
+@mixin hide-component {
+  @media (min-width: 681px) {
+    display: none;
+  }
+}

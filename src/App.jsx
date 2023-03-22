@@ -5,6 +5,7 @@ import Hero from "./components/hero";
 import CocktailList from "./components/cocktailList";
 import Footer from "./components/footer";
 import CocktailDetail from "./components/cocktailDetail";
+import HamburgerMenu from "./components/hamburgerMenu";
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
@@ -12,14 +13,14 @@ function App() {
     cardIsclicked: false,
     payload: {},
   });
-
+  const [hamburgerMenuIsOpen, setHamburgerMenu] = useState(false);
   useEffect(() => {
     GET().then(({ drinks }) => setCocktailList(drinks));
   }, []);
 
   return (
     <div className={styles.App}>
-      <Hero />
+      <Hero setHamburgerMenu={setHamburgerMenu} />
       {!cocktailDetailContext.cardIsclicked && (
         <CocktailList
           cocktailList={cocktailList}
@@ -34,6 +35,7 @@ function App() {
         />
       )}
       <Footer />
+      {hamburgerMenuIsOpen && <HamburgerMenu />}
     </div>
   );
 }

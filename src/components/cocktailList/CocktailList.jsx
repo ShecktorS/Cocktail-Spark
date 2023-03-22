@@ -7,7 +7,7 @@ const CocktailList = ({ cocktailList, setCocktailDetailContext }) => {
       {cocktailList.map((cocktail) => (
         <CocktailItem
           cocktail={cocktail}
-          key={cocktail.idDrinks}
+          key={cocktail.idDrink}
           setCocktailDetailContext={setCocktailDetailContext}
         />
       ))}
