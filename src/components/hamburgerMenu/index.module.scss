@@ -15,7 +15,6 @@
 
   .list {
     height: calc(100% - 50px);
-    border: dotted 5px $active-color;
     padding: 5px;
     list-style-type: none;
     @include flex-container(5px, column, space-around);

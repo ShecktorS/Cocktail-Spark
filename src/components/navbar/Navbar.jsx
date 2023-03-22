@@ -1,5 +1,6 @@
 import styles from "./index.module.scss";
 import NavbarContent from "../navbarContent";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({ setHamburgerMenu }) => {
   const onHandleClick = () => setHamburgerMenu((prev) => !prev);
@@ -20,7 +21,7 @@ const Navbar = ({ setHamburgerMenu }) => {
       </ul> */}
       <NavbarContent className={styles.content} />
       <div className={styles.hamburger} onClick={onHandleClick}>
-        🍔
+        <GiHamburgerMenu />
       </div>
     </div>
   );

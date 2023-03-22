@@ -20,7 +20,12 @@
     right: 20px;
     cursor: pointer;
     font-size: 2em;
-    background-color: $secondary-color;
+    color: $secondary-color;
+    transition: all 0.4s ease;
+
+    &:hover {
+      color: $active-color;
+    }
 
     @include hide-component;
   }
