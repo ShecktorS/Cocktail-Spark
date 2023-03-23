@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.Popup {
+  @include flex-container(5px, column);
+  width: 300px;
+  position: fixed;
+  background-color: $secondary-color;
+  top: 5px;
+  z-index: 2;
+  color: $primary-color;
+
+  h2 {
+    font-size: 1.2em;
+  }
+}
