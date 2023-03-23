@@ -2,8 +2,9 @@
 @import "../../styles/mixin";
 
 .HamburgerMenu {
-  box-sizing: border-box;
+  @include hide-component;
 
+  box-sizing: border-box;
   height: 440px;
   width: 290px;
   background-color: $secondary-color;
@@ -11,7 +12,7 @@
   top: 70px;
   right: 18px;
   padding: 10px;
-  @include hide-component;
+  transition: all 0.4s ease-in-out;
 
   .list {
     height: calc(100% - 50px);

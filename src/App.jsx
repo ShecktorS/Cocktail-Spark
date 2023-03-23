@@ -6,21 +6,29 @@ import CocktailList from "./components/cocktailList";
 import Footer from "./components/footer";
 import CocktailDetail from "./components/cocktailDetail";
 import HamburgerMenu from "./components/hamburgerMenu";
+import Reservations from "./components/reservations";
+import Popup from "./components/popup";
 
 function App() {
+  const [hamburgerMenuIsOpen, setHamburgerMenu] = useState(false);
+  const [reservationsIsOpen, setReservations] = useState(false);
+  const [userData, setUserData] = useState({});
+  const [popupIsOpen, setPopup] = useState(false);
   const [cocktailList, setCocktailList] = useState([]);
   const [cocktailDetailContext, setCocktailDetailContext] = useState({
     cardIsclicked: false,
     payload: {},
   });
-  const [hamburgerMenuIsOpen, setHamburgerMenu] = useState(false);
   useEffect(() => {
     GET().then(({ drinks }) => setCocktailList(drinks));
   }, []);
 
   return (
     <div className={styles.App}>
-      <Hero setHamburgerMenu={setHamburgerMenu} />
+      <Hero
+        setHamburgerMenu={setHamburgerMenu}
+        setReservations={setReservations}
+      />
       {!cocktailDetailContext.cardIsclicked && (
         <CocktailList
           cocktailList={cocktailList}
@@ -35,7 +43,20 @@ function App() {
         />
       )}
       <Footer />
-      {hamburgerMenuIsOpen && <HamburgerMenu />}
+      {hamburgerMenuIsOpen && (
+        <HamburgerMenu
+          setReservations={setReservations}
+          setHamburgerMenu={setHamburgerMenu}
+        />
+      )}
+      {reservationsIsOpen && (
+        <Reservations
+          setReservations={setReservations}
+          setPopup={setPopup}
+          setUserData={setUserData}
+        />
+      )}
+      {popupIsOpen && <Popup userData={userData} />}
     </div>
   );
 }
