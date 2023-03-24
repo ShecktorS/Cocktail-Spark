@@ -6,7 +6,8 @@ const CocktailItem = ({ cocktail, setCocktailDetailContext }) => {
       ...prev,
       payload: cocktail,
       cardIsclicked: true,
-    }));
+    })),
+      console.log(cocktail.strDrink);
   };
 
   return (
@@ -14,7 +15,7 @@ const CocktailItem = ({ cocktail, setCocktailDetailContext }) => {
       <div className={styles.card}>
         <img
           src={cocktail.strDrinkThumb}
-          alt="drink.strDrink"
+          alt={cocktail.strDrink}
           className={styles.cardImage}
         />
         <h2 className={styles.cardName}>{cocktail.strDrink}</h2>
