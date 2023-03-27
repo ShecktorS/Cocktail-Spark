@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixin";
-
 .Navbar {
   @include flex-container(30px);
   box-sizing: border-box;
@@ -16,17 +13,50 @@
 
   .hamburger {
     position: absolute;
+    @include size(60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     top: 20px;
     right: 20px;
     cursor: pointer;
     font-size: 2em;
-    color: $secondary-color;
+    background-color: $secondary-color;
     transition: all 0.4s ease;
 
-    &:hover {
-      color: $active-color;
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 45px;
+      margin: 4px 0;
+      background-color: $primary-color;
     }
 
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 45px;
+      margin: 4px 0;
+      background-color: $primary-color;
+    }
+
+    div {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 45px;
+      margin: 4px 0;
+      background-color: $primary-color;
+    }
+
+    .clicked {
+      hamburger::after {
+        color: red;
+      }
+    }
     @include hide-component;
   }
 }

@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 
 const Footer = () => {
   return (
-    <div className={styles.Footer}>
+    <div className={`${styles.Footer}`}>
       <div className={styles.bridge}>
         <h2>Bridge</h2>
         <p>

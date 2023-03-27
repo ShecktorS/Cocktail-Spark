@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixin";
-
 .CocktailDetail {
   @include flex-container(10px, row, space-around);
   color: $primary-color;

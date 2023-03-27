@@ -1,6 +1,7 @@
 .CocktailList {
-  display: flex;
-  gap: 100px;
+  @include flexbox();
+  @include flex-direction(row-reverse);
+  gap: 80px;
   width: 90vw;
   overflow-x: auto;
   overflow-y: hidden;

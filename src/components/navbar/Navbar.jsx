@@ -1,9 +1,10 @@
 import styles from "./index.module.scss";
 import NavbarContent from "../navbarContent";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
 
 const Navbar = ({ setHamburgerMenu, setReservations }) => {
   const onHandleClick = () => setHamburgerMenu((prev) => !prev);
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div className={styles.Navbar}>
@@ -16,8 +17,11 @@ const Navbar = ({ setHamburgerMenu, setReservations }) => {
         className={styles.content}
         setReservations={setReservations}
       />
-      <div className={styles.hamburger} onClick={onHandleClick}>
-        <GiHamburgerMenu />
+      <div
+        className={`${styles.hamburger} ${isClicked && styles.clicked}`}
+        onClick={onHandleClick}
+      >
+        <div></div>
       </div>
     </div>
   );
